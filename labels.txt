@@ -1,0 +1,78 @@
+Air
+Anggur
+Apel
+Ayam Goreng
+Ayam Pop
+Bakso
+Bakwan
+Batagor
+Bawang Merah
+Bawang Putih
+Bayam
+Bit
+Bubur
+Burger
+Cabai Rawit
+Cakwe
+Capcay
+Chocolate Cake
+Crepes
+Cumi
+Dendeng Batokok
+Donat
+Durian
+Es Krim
+French Fries
+Fu Yung Hai
+Gado-Gado
+Gudeg
+Gulai Ikan
+Gulai Tambusu
+Gulai Tunjang
+Gyoza
+Ikan
+Ikan Goreng
+Jagung
+Jahe
+Jeruk
+Kacang
+Kacang Kedelai
+Kebab
+Kelepon
+Kentang
+Kerupuk
+Ketimun
+Kopi
+Kubis
+Kue Lumpur
+Lemon
+Mangga
+Mie Goreng
+Nanas
+Nasi Goreng
+Nasi Padang
+Onion Rings
+Pancakes
+Paprika
+Pepaya
+Pisang
+Pizza
+Ramen
+Rawon
+Rendang
+Risoles
+Sashimi
+Sate
+Semangka
+Soto
+Sushi
+Takoyaki
+Telur Balado
+Telur Dadar
+Terong
+Tiramisu
+Tomat
+Tomato
+Ubi Jalar Merah
+Waffles
+Wortel
