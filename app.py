@@ -3,228 +3,105 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import json
-import re
+import random
 
-# ---------- Load Model ----------
-@st.cache_resource
-def load_model():
-    interpreter = tf.lite.Interpreter(model_path="model.tflite")
-    interpreter.allocate_tensors()
-    return interpreter
+# Load labels
+with open("labels.txt", "r", encoding="utf-8") as f:
+    labels = [line.strip() for line in f.readlines()]
 
-# ---------- Load Labels & Nutrition ----------
-@st.cache_data
-def load_labels():
-    with open("labels.txt", "r") as f:
-        return [line.strip() for line in f.readlines()]
+# Load food data JSON
+with open("food_data.json", "r", encoding="utf-8") as f:
+    food_data = json.load(f)
 
-@st.cache_data
-def load_nutrition():
-    with open("nutrition.json", "r") as f:
-        return json.load(f)
+# Load TFLite model
+interpreter = tf.lite.Interpreter(model_path="model.tflite")
+interpreter.allocate_tensors()
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
 
-# ---------- Prediction ----------
-def predict_image(image, interpreter, labels):
-    input_details = interpreter.get_input_details()
-    output_details = interpreter.get_output_details()
-
-    img = image.resize((224, 224))
-    img_array = np.array(img, dtype=np.float32)
-    img_array = np.expand_dims(img_array, axis=0)
-    if input_details[0]['dtype'] == np.float32:
-        img_array = img_array / 255.0
-
-    interpreter.set_tensor(input_details[0]['index'], img_array)
+def predict(image):
+    img = image.resize((224, 224))  # sesuaikan ukuran model
+    img = np.array(img, dtype=np.float32) / 255.0
+    img = np.expand_dims(img, axis=0)
+    interpreter.set_tensor(input_details[0]['index'], img)
     interpreter.invoke()
-    output_data = interpreter.get_tensor(output_details[0]['index'])[0]
+    preds = interpreter.get_tensor(output_details[0]['index'])[0]
+    idx = np.argmax(preds)
+    return labels[idx], preds[idx]
 
-    top_index = np.argmax(output_data)
-    return labels[top_index], float(output_data[top_index])
+# Fun facts database
+fun_facts = [
+    "Did you know? Satay was once listed among the world's most delicious foods by CNN Travel!",
+    "Fun fact: In Padang restaurants, all dishes are displayed on the table, but you only pay for what you eat!",
+    "Many Indonesian foods are traditionally eaten with hands 鈥� it鈥檚 part of the culture!",
+    "Spices in Indonesian cuisine reflect the country鈥檚 history as a major spice trading hub."
+]
 
-# ---------- Get Nutrition ----------
-def get_nutrition(item, berat, use_portion):
-    if item["type"] == "buah-sayur":
-        cal = item["nutrition_per_100g"]["calories"] * berat / 100
-        prot = item["nutrition_per_100g"]["proteins"] * berat / 100
-        fat = item["nutrition_per_100g"]["fat"] * berat / 100
-        carb = item["nutrition_per_100g"]["carbohydrate"] * berat / 100
-        source = f"per 100 gram (buah/sayur)"
-    else:
-        if use_portion:
-            cal = item["nutrition_per_portion"]["calories"]
-            prot = item["nutrition_per_portion"]["proteins"]
-            fat = item["nutrition_per_portion"]["fat"]
-            carb = item["nutrition_per_portion"]["carbohydrate"]
-            source = f"per porsi ({item['portion_size_g']} gram)"
-        else:
-            cal = item["nutrition_per_100g"]["calories"] * berat / 100
-            prot = item["nutrition_per_100g"]["proteins"] * berat / 100
-            fat = item["nutrition_per_100g"]["fat"] * berat / 100
-            carb = item["nutrition_per_100g"]["carbohydrate"] * berat / 100
-            source = f"per 100 gram"
-    return cal, prot, fat, carb, source
+# Streamlit App
+st.set_page_config(page_title="Food Tourism Assistant 馃嚠馃嚛", page_icon="馃崪")
+st.title("馃崪 Food Tourism Assistant Indonesia 馃嚠馃嚛")
+st.write("Upload a food photo and chat with your culinary guide!")
 
-# ---------- Chatbot Response ----------
-def chatbot_response(user_input, last_prediction, nutrition_data, berat, use_portion):
-    if not last_prediction:
-        return ["Silakan kirim gambar makanan terlebih dahulu."]
-
-    berat_chat = berat
-    porsi_count = 1
-
-    porsi_match = re.search(r"(\d+)\s*porsi", user_input.lower())
-    if porsi_match:
-        porsi_count = int(porsi_match.group(1))
-
-    berat_match = re.search(r"(\d+)\s*(gram|gr|g)", user_input.lower())
-    if berat_match:
-        berat_chat = int(berat_match.group(1))
-
-    for item in nutrition_data:
-        if item["name"].lower() == last_prediction.lower():
-            cal, prot, fat, carb, source = get_nutrition(item, berat_chat, use_portion)
-
-            if use_portion and porsi_count > 1 and item["type"] == "non-buah-sayur":
-                cal *= porsi_count
-                prot *= porsi_count
-                fat *= porsi_count
-                carb *= porsi_count
-                source = f"per {porsi_count} porsi ({item['portion_size_g']} gram x {porsi_count})"
-            elif not use_portion:
-                if porsi_count > 1:
-                    berat_chat *= porsi_count
-                    cal, prot, fat, carb, source = get_nutrition(item, berat_chat, use_portion)
-
-            responses = []
-            responses.append(f"Sepertinya ini adalah {last_prediction}.")
-
-            lower_input = user_input.lower()
-            if "kalori" in lower_input:
-                responses.append(f"Kandungan kalori pada makanan tersebut adalah sekitar {cal:.2f} kcal untuk {source}.")
-            elif "protein" in lower_input:
-                responses.append(f"Kandungan protein pada makanan tersebut adalah sekitar {prot:.2f} gram untuk {source}.")
-            elif "lemak" in lower_input:
-                responses.append(f"Kandungan lemak pada makanan tersebut adalah sekitar {fat:.2f} gram untuk {source}.")
-            elif "karbo" in lower_input or "karbohidrat" in lower_input:
-                responses.append(f"Kandungan karbohidrat pada makanan tersebut adalah sekitar {carb:.2f} gram untuk {source}.")
-            else:
-                responses.append(
-                    f"Data gizi {last_prediction} untuk {source} adalah:\n"
-                    f"- Kalori: {cal:.2f} kcal\n"
-                    f"- Protein: {prot:.2f} g\n"
-                    f"- Lemak: {fat:.2f} g\n"
-                    f"- Karbohidrat: {carb:.2f} g"
-                )
-            return responses
-    return ["Maaf, data nutrisi tidak ditemukan."]
-
-# ---------- Render Chat Bubble ----------
-def render_message(msg):
-    sender = msg["sender"]
-    content = msg["content"]
-    is_image = msg.get("is_image", False)
-
-    if sender == "user":
-        if is_image:
-            st.markdown('<div style="text-align: right; font-weight:bold; color:#064273;">Anda (Foto):</div>', unsafe_allow_html=True)
-            st.image(content, width=250)
-        else:
-            st.markdown(
-                f'<div style="text-align: right; background-color: #1E90FF; color: white; padding: 10px; '
-                f'border-radius: 15px; margin: 6px 0; max-width: 70%; margin-left: auto; font-size: 16px;">{content}</div>', 
-                unsafe_allow_html=True
-            )
-    else:
-        st.markdown(
-            f'<div style="text-align: left; background-color: #f1f0f0; color: #333; padding: 10px; '
-            f'border-radius: 15px; margin: 6px 0; max-width: 70%; font-size: 16px;">{content}</div>', 
-            unsafe_allow_html=True
-        )
-
-# ---------- Main App ----------
-st.set_page_config(page_title="Chatbot Estimasi Kalori", layout="wide")
-st.title("🍽 Chatbot Estimasi Kalori Makanan (Chat Mode)")
-
-interpreter = load_model()
-labels = load_labels()
-nutrition_data = load_nutrition()
-
+# Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
-if "last_prediction" not in st.session_state:
-    st.session_state.last_prediction = None
-if "last_weight" not in st.session_state:
-    st.session_state.last_weight = 100
-if "upload_key" not in st.session_state:
-    st.session_state.upload_key = 0
+if "current_food" not in st.session_state:
+    st.session_state.current_food = None
 
-weight = st.sidebar.number_input("Masukkan berat makanan (gram)", min_value=1, value=st.session_state.last_weight, step=1)
-st.session_state.last_weight = weight
+# Upload food photo
+uploaded = st.file_uploader("Upload a food photo", type=["jpg", "jpeg", "png"])
 
-per_100g = st.sidebar.checkbox("Tampilkan nilai gizi per 100 gram", value=True)
-per_portion = st.sidebar.checkbox("Tampilkan nilai gizi per porsi (untuk makanan non buah & sayur)", value=False)
+if uploaded and st.session_state.current_food is None:
+    image = Image.open(uploaded).convert("RGB")
+    st.image(image, caption="Uploaded Image", use_column_width=True)
 
-st.subheader("Chat")
+    label, conf = predict(image)
+    st.session_state.current_food = label
 
-for msg in st.session_state.messages:
-    render_message(msg)
-
-st.markdown("---")
-
-col1, col2 = st.columns([3,1])
-with col1:
-    user_text = st.text_input("Ketik pesan di sini...", key="input_text")
-    submit = st.button("Kirim")
-with col2:
-    user_img = st.file_uploader(
-        "Upload gambar makanan",
-        type=["jpg","jpeg","png"],
-        key=f"uploaded_file_{st.session_state.upload_key}"
-    )
-
-def add_message(content, sender="user", is_image=False):
-    st.session_state.messages.append({"content": content, "sender": sender, "is_image": is_image})
-
-# Handle upload gambar
-if user_img is not None:
-    img = Image.open(user_img).convert("RGB")
-    add_message(img, sender="user", is_image=True)
-
-    pred_label, confidence = predict_image(img, interpreter, labels)
-    st.session_state.last_prediction = pred_label
-
-    matched_item = next((x for x in nutrition_data if x["name"].lower() == pred_label.lower()), None)
-
-    if matched_item:
-        cal, prot, fat, carb, source = get_nutrition(matched_item, st.session_state.last_weight, per_portion)
-        nutri_text = (
-            f"Hasil analisis gambar menunjukkan makanan adalah {pred_label}.\n\n"
-            f"Kandungan gizinya sekitar:\n"
-            f"- Kalori: {cal:.2f} kcal ({source})\n"
-            f"- Protein: {prot:.2f} g\n"
-            f"- Lemak: {fat:.2f} g\n"
-            f"- Karbohidrat: {carb:.2f} g"
+    if label in food_data:
+        info = food_data[label]
+        intro = (
+            f"This is **{label}**, a dish from {info['origin']}. 馃嵔锔廫n\n"
+            f"It鈥檚 made with {info['ingredients']}, usually tastes **{info['taste']}**, "
+            f"and is often enjoyed like this: {info['culture']}.\n\n"
+            f"Tips for you: {info['tips']}.\n\n"
+            f"{info['description']}\n\n"
+            f"鉁� {random.choice(fun_facts)}"
         )
+        st.session_state.messages.append({"role": "assistant", "content": intro})
+
+# Display chat history
+for msg in st.session_state.messages:
+    if msg["role"] == "user":
+        st.chat_message("user").write(msg["content"])
     else:
-        nutri_text = "Data nutrisi tidak ditemukan."
+        st.chat_message("assistant").write(msg["content"])
 
-    add_message(nutri_text, sender="bot")
-    st.session_state.upload_key += 1
+# Chat input
+if st.session_state.current_food:
+    prompt = st.chat_input("Ask about this food!")
+    if prompt:
+        st.session_state.messages.append({"role": "user", "content": prompt})
 
-# Handle user text submit
-if submit and user_text:
-    add_message(user_text, sender="user")
+        # Get food info
+        food = st.session_state.current_food
+        info = food_data.get(food, {})
 
-    bot_responses = chatbot_response(
-        user_text,
-        st.session_state.last_prediction,
-        nutrition_data,
-        st.session_state.last_weight,
-        per_portion and not per_100g
-    )
-    for resp in bot_responses:
-        add_message(resp, sender="bot")
+        # Simple rule-based responses
+        response = ""
+        q = prompt.lower()
+        if "spicy" in q:
+            if "馃尪锔�" in info.get("tips", "") or "spicy" in info.get("taste", "").lower():
+                response = f"Yes, **{food}** can be quite spicy! 馃尪锔� You might want to start with a mild version."
+            else:
+                response = f"**{food}** is generally not very spicy, but it depends on how it鈥檚 cooked."
+        elif "where" in q:
+            response = f"You can try delicious **{food}** in many local warungs (small restaurants). "
+            response += "If you're in Jakarta, I recommend going to traditional food stalls for the most authentic taste!"
+        elif "how" in q and "eat" in q:
+            response = f"Locals usually eat **{food}** like this: {info.get('culture', 'simply served with rice or as a snack')}."
+        else:
+            response = f"Here鈥檚 more about **{food}**: {info.get('description', 'A tasty Indonesian dish!')}"
 
-    # Reset input text after submit
-    st.session_state["input_text"] = ""
-
+        st.session_state.messages.append({"role": "assistant", "content": response})
+        st.rerun()
