@@ -242,79 +242,30 @@ for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
 # =========================
-# General Chatbot (sebelum upload foto)
-# =========================
-def general_chat(q: str) -> str:
-    qn = normalize(q)
-
-    # ---- Cara pakai chatbot (cek duluan sebelum sapaan)
-    howto_triggers = [
-        "how to use", "how do i use", "how does this work", "how to use this chatbot",
-        "what can you do", "how do you work", "how should i use you", "how does it work",
-        "explain how to use", "guide me how to use", "how can you help me",
-        "cara pakai", "cara menggunakan", "gimana cara pakai", "gimana cara menggunakan",
-        "bagaimana cara menggunakan", "bagaimana cara kerja", "apa yang bisa kamu lakukan",
-        "fungsi kamu apa", "buat apa chatbot ini", "jelaskan cara pakai", "bisa bantu apa"
-    ]
-
-    if any(trigger in qn for trigger in howto_triggers):
-        return (
-            "📖 Here’s how to use me:\n"
-            "1️⃣ You can **chat directly** about Indonesian food, culture, and eating tips — even without uploading anything.\n"
-            "2️⃣ If you want me to **recognize a dish**, just **upload a food photo**. I’ll identify it and tell you its origin, taste, and ingredients.\n"
-            "3️⃣ After that, you can ask more **specific questions** about the dish — like price, halal info, spiciness, nutrition, or cultural meaning.\n\n"
-            "👉 So, would you like to try chatting first, or upload a food photo now?"
-        )
-
-    # ---- Sapaan / hello (dipindah ke bawah)
-    if any(k in qn for k in ["hello", "hi", "hai", "halo"]):
-        return (
-            "👋 Hello! Welcome to Indonesia! I’m your Food Tourism Assistant.\n\n"
-            "I can tell you about Indonesian food culture, eating habits, or you can upload a food photo for identification."
-        )
-
-    # ---- Spicy
-    if "spicy" in qn or "pedas" in qn:
-        return "🌶️ Indonesian food can be quite spicy. If you don’t like it too hot, say *'tidak pedas'* (not spicy) or *'sambalnya sedikit saja'* (just a little chili)."
-    
-    # ---- Street food / warung
-    if "street" in qn or "warung" in qn:
-        return "🍲 Street food is everywhere! Warung (small eateries) and kaki lima (street carts) are cheap and tasty. Locals love them!"
-    
-    # ---- Rice
-    if "rice" in qn or "nasi" in qn:
-        return "🍚 Rice is the staple of Indonesian meals. Many dishes like Nasi Goreng (fried rice) or Nasi Padang are built around rice."
-    
-    # ---- Rekomendasi makanan
-    if "recommend" in qn or "try" in qn:
-        return "😋 You should try: **Rendang**, **Satay**, **Bakso**, and **Nasi Goreng**. They are among Indonesia’s most famous dishes."
-    
-    # ---- Fallback
-    return "I can tell you about Indonesian food, culture, and eating tips. Or you can upload a food photo for a detailed explanation!"
-
-
-
-# =========================
 # Chat Input
 # =========================
-user_q = st.chat_input("Say something... (chat or upload a food photo later)")
+user_q = st.chat_input("Say something... (you can also upload a food photo later)")
 
 if user_q:
     st.session_state.messages.append({"role": "user", "content": user_q})
 
+    # Jika belum ada foto makanan → jawab general dulu
     if not st.session_state.current_food:
-        # gunakan general_chat
-        reply = general_chat(user_q)
+        reply = (
+            "👋 Hi! I'm your Indonesian Food Tourism Assistant.\n\n"
+            "You can ask me general questions about Indonesian food culture, "
+            "or upload a photo of a dish so I can identify it and answer more specifically."
+        )
         st.session_state.messages.append({"role": "assistant", "content": reply})
+
     else:
-        # gunakan rule-based intent untuk makanan spesifik
+        # Kalau sudah ada makanan → gunakan rule-based answer
         food = st.session_state.current_food
         info = food_db.get(food, {})
         reply = answer_by_intent(food, user_q, info)
         st.session_state.messages.append({"role": "assistant", "content": reply})
 
     st.rerun()
-
 
 # =========================
 # UI — Upload & Classify (pindahkan ke bawah supaya interaksi dulu baru upload)
@@ -331,10 +282,10 @@ if uploaded and st.session_state.current_food is None:
 
     info = food_db.get(label, {})
     intro = (
-        f"Identified as **{label}** \n\n"
+        f"Identified as **{label}** (confidence {conf:.2f}).\n\n"
         f"{safe_get(info, 'one_liner', safe_get(info, 'description', ''))}\n\n"
         f"**Origin:** {safe_get(info, 'origin')}\n"
-        f"**Ingredients:** {safe_get(info, 'ingredients')}\n\n"
+        f"**Ingredients:** {safe_get(info, 'ingredients')}\n"
         f"**Taste:** {safe_get(info, 'taste')}\n\n"
         f"Now you can ask me anything about {label}: comparison, culture, price, safety, "
         f"how to order, nutrition, variants, gluten, halal, etc."
