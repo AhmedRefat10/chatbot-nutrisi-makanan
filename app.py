@@ -12,7 +12,7 @@ from typing import Dict, Any, List
 # =========================
 st.set_page_config(page_title="Food Tourism Assistant 🇮🇩 (Rule-based)", page_icon="🍜")
 
-st.title("🍜 Food Tourism Assistant Indonesia — Rule-based (No LLM)")
+st.title("🍜 Food Tourism Assistant Indonesia 🍜")
 st.caption("Upload a food photo → model klasifikasi → chatbot menjawab pertanyaan kompleks pakai knowledge dari JSON.")
 
 # =========================
