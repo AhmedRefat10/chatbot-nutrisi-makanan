@@ -1,6 +1,8 @@
 # 🍜 Food Tourism Assistant Indonesia
 
-Aplikasi **Food Tourism Assistant** berbasis **Streamlit** yang membantu wisatawan mengenal kuliner Indonesia.  
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Deployed-brightgreen?logo=streamlit)](https://chatbot-nutrisi-makanan-snoopynak.streamlit.app/)
+
+Aplikasi **Food Tourism Assistant** berbasis **Streamlit** yang membantu wisatawan asing mengenal kuliner Indonesia.  
 Pengguna dapat mengunggah foto makanan, aplikasi akan mengenali jenis makanan menggunakan model **TensorFlow Lite**, lalu chatbot akan memberikan penjelasan budaya, bahan utama, serta tips menikmati makanan tersebut berdasarkan basis data JSON.
 
 ## ✨ Fitur Utama
@@ -16,16 +18,17 @@ Pengguna dapat mengunggah foto makanan, aplikasi akan mengenali jenis makanan me
 - **Python 3.x**
 - **Streamlit**
 - **TensorFlow Lite**
-- **Pandas & NumPy** untuk pengolahan data
-- **JSON** sebagai basis data nutrisi
+- **NumPy** untuk pengolahan data
+- **JSON** (basis data makanan Indonesia)
 
 ## 📂 Struktur Proyek
 
 ```
 ├── app.py               # Script utama aplikasi
-├── nutrition.json       # Data nutrisi per 100 gram
+├── foods.json           # Data nutrisi per 100 gram
 ├── model.tflite         # Model TensorFlow Lite
 ├── labels.txt           # Label kelas makanan
+├── requirements.txt     # Dependency project
 ├── README.md            # Dokumentasi proyek
 ```
 
@@ -51,9 +54,10 @@ Pengguna dapat mengunggah foto makanan, aplikasi akan mengenali jenis makanan me
 
 ## 📝 Catatan
 
-- Data nutrisi dalam `nutrition.json` berbasis **per 100 gram**. Jika ingin menghitung porsi, chatbot akan mengalikannya otomatis.
+- Data kuliner Indonesia tersimpan di `foods.json`.
 - Model TFLite harus sesuai dengan label di `labels.txt`.
+- Aplikasi ditujukan untuk membantu wisatawan **asing** memahami kuliner Indonesia.
 
 ## 📜 Lisensi
 
-Proyek ini dibuat untuk tujuan pembelajaran dan penelitian.
+Proyek ini dibuat untuk tujuan pembelajaran, penelitian, dan promosi wisata kuliner Indonesia.
