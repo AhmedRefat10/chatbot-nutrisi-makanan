@@ -10,10 +10,13 @@ from typing import Dict, Any, List
 # =========================
 # App Config
 # =========================
-st.set_page_config(page_title="Food Tourism Assistant 🇮🇩 (Rule-based)", page_icon="🍜")
-
-st.title("🍜 Food Tourism Assistant Indonesia 🍜")
-st.caption("Upload a food photo → model klasifikasi → chatbot menjawab pertanyaan kompleks pakai knowledge dari JSON.")
+st.set_page_config(
+    page_title="Food Tourism Assistant Indonesia 🇮🇩",
+    page_icon="🍜",
+    layout="centered"
+)
+st.title("🍜 Food Tourism Assistant Indonesia")
+st.caption("Explore Indonesian cuisine with AI-powered recognition and cultural insights.")
 
 # =========================
 # Load Assets
@@ -31,7 +34,7 @@ def load_labels() -> List[str]:
 
 @st.cache_resource
 def load_food_data() -> Dict[str, Any]:
-    with open("food_info_extended.json", "r", encoding="utf-8") as f:
+    with open("foods.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 interpreter = load_interpreter()
