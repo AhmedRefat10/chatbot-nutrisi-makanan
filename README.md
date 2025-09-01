@@ -1,63 +1,59 @@
-# 🍜 Food Tourism Assistant Indonesia
+The Food Tourism Assistant app, based on Streamlite, helps foreign tourists learn about Indonesian cuisine.
 
-[![Streamlit App](https://img.shields.io/badge/Streamlit-Deployed-brightgreen?logo=streamlit)](https://chatbot-nutrisi-makanan-snoopynak.streamlit.app/)
+Users can upload food photos, and the app will recognize the food using a TensorFlow Lite model. The chatbot will then provide cultural explanations, key ingredients, and tips for enjoying the food based on a JSON database.
 
-Aplikasi **Food Tourism Assistant** berbasis **Streamlit** yang membantu wisatawan asing mengenal kuliner Indonesia.  
-Pengguna dapat mengunggah foto makanan, aplikasi akan mengenali jenis makanan menggunakan model **TensorFlow Lite**, lalu chatbot akan memberikan penjelasan budaya, bahan utama, serta tips menikmati makanan tersebut berdasarkan basis data JSON.
+## ✨ Key Features
 
-## ✨ Fitur Utama
+- 📷 **Upload Food Photos** → Predicts typical Indonesian dishes using the TFLite model.
+- 🧑‍🍳 **Culinary Explanations** → Displays descriptions, key ingredients, flavors, and cultural context from JSON.
+- 💬 **Interactive Chatbot** → Tourists can ask questions about food, preparation methods, and culinary recommendations.
+- 💡 **Chat Bubble UI** → Conversation interface similar to a chat app.
+- 🕒 **Chat History** → Saves conversation history during a session.
 
-- 📷 **Upload Foto Makanan** → Prediksi jenis makanan khas Indonesia dengan model TFLite.
-- 🧑‍🍳 **Penjelasan Kuliner** → Menampilkan deskripsi, bahan utama, cita rasa, dan konteks budaya dari JSON.
-- 💬 **Chatbot Interaktif** → Wisatawan bisa bertanya seputar makanan, cara penyajian, hingga rekomendasi kuliner.
-- 💡 **UI Chat Bubble** → Tampilan percakapan mirip aplikasi chat.
-- 🕒 **Histori Chat** → Menyimpan riwayat percakapan selama sesi.
-
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Technologies Used
 
 - **Python 3.x**
 - **Streamlit**
 - **TensorFlow Lite**
-- **NumPy** untuk pengolahan data
-- **JSON** (basis data makanan Indonesia)
+- **NumPy** for data processing
+- **JSON** (Indonesian food database)
 
-## 📂 Struktur Proyek
+## 📂 Project Structure
 
 ```
-├── app.py               # Script utama aplikasi
-├── foods.json           # Data nutrisi per 100 gram
-├── model.tflite         # Model TensorFlow Lite
-├── labels.txt           # Label kelas makanan
-├── requirements.txt     # Dependency project
-├── README.md            # Dokumentasi proyek
+├── app.py # Main application script
+├── foods.json # Nutritional data per 100 grams
+├── model.tflite # TensorFlow Lite model
+├── labels.txt # Food class labels
+├── requirements.txt # Project dependencies
+├── README.md # Project documentation
 ```
 
-## 🚀 Cara Menjalankan
+## 🚀 How to Run
 
-1. **Clone repository** ini atau salin semua file ke folder lokal.
-2. Pastikan Python dan pip sudah terinstal.
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Jalankan aplikasi Streamlit:
-   ```bash
-   streamlit run app.py
-   ```
+1. **Clone this repository**
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+3. Run the Streamlit app:
+```bash
+streamlit run app.py
+```
 
-## 📌 Cara Menggunakan
+## 📌 How to Use
 
-1. **Unggah gambar makanan** melalui panel upload.
-2. **Lihat prediksi makanan** dan informasi gizi otomatis.
-3. **Gunakan chatbot** untuk bertanya lebih detail tentang gizi makanan.
-4. Histori percakapan akan muncul di layar.
+1. Upload a food image via the upload panel.
+2. See automatic food predictions and nutritional information.
+3. Use the chatbot to ask for more detailed information about the food's nutritional content.
+4. The conversation history will appear on the screen.
 
-## 📝 Catatan
+## 📝 Notes
 
-- Data kuliner Indonesia tersimpan di `foods.json`.
-- Model TFLite harus sesuai dengan label di `labels.txt`.
-- Aplikasi ditujukan untuk membantu wisatawan **asing** memahami kuliner Indonesia.
+- Indonesian culinary data is stored in `foods.json`.
+- The TFLite model must match the labels in `labels.txt`.
+- The application is intended to help foreign tourists understand Indonesian cuisine.
 
-## 📜 Lisensi
+## 📜 License
 
-Proyek ini dibuat untuk tujuan pembelajaran, penelitian, dan promosi wisata kuliner Indonesia.
+This project was created for the purposes of learning, research, and promoting Indonesian culinary tourism.
