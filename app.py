@@ -18,6 +18,22 @@ st.set_page_config(
 st.title("🍜 Food Tourism Assistant Indonesia")
 st.caption("Explore Indonesian cuisine with AI-powered recognition and cultural insights.")
 
+# tombol popover di area utama
+with st.popover("📖 How to use the chatbot"):
+    st.markdown("""
+    ### 📖 How to use
+    1. 📷 **Upload a food photo first** so the chatbot can recognize the dish.  
+    2. 🤖 The chatbot will identify the dish and give some information.  
+    3. 💬 After the dish is detected, you can continue the conversation by asking:  
+       - Where can I find this food?  
+       - How spicy is it?  
+       - Is it halal or not?  
+       - What’s its cultural or historical background?  
+       - What are the nutrition facts?  
+    4. 📝 You can ask in **English or Bahasa Indonesia**.  
+    """)
+    
+
 # =========================
 # Load Assets
 # =========================
@@ -233,65 +249,93 @@ def answer_by_intent(food: str, q: str, info: Dict[str, Any]) -> str:
 # =========================
 if "messages" not in st.session_state:
     st.session_state.messages = []
-if "current_food" not in st.session_state:
     st.session_state.current_food = None
-if "conf" not in st.session_state:
     st.session_state.conf = 0.0
+
+    # Greeting awal
+    reply1 = (
+        "👋 Hi! I'm your Indonesian Food Tourism Assistant.\n\n"
+        "Please upload a photo of the dish first so I can recognize it. "
+        "After that, you can ask more specific questions."
+    )
+    reply2 = (
+        "💡 Once a dish is identified, you can ask things like:\n"
+        "- Where can I find this food?\n"
+        "- How spicy is it?\n"
+        "- Is it halal?\n"
+        "- What’s its cultural background?\n"
+        "- What are the nutrition facts?\n"
+    )
+    st.session_state.messages.append({"role": "assistant", "content": reply1})
+    st.session_state.messages.append({"role": "assistant", "content": reply2})
 
 # =========================
 # Chat History
 # =========================
 for msg in st.session_state.messages:
-    st.chat_message(msg["role"]).write(msg["content"])
+    with st.chat_message(msg["role"]):
+        if msg.get("type") == "image":
+            st.image(msg["content"], caption="Uploaded Image", use_column_width=True)
+        else:
+            st.write(msg["content"])
 
 # =========================
 # Chat Input
 # =========================
-user_q = st.chat_input("Say something... (you can also upload a food photo later)")
+if st.session_state.current_food:
+    user_q = st.chat_input("Ask me anything about the dish...")
 
-if user_q:
-    st.session_state.messages.append({"role": "user", "content": user_q})
+    if user_q:
+        st.session_state.messages.append({"role": "user", "content": user_q})
 
-    # Jika belum ada foto makanan → jawab general dulu
-    if not st.session_state.current_food:
-        reply = (
-            "👋 Hi! I'm your Indonesian Food Tourism Assistant.\n\n"
-            "You can ask me general questions about Indonesian food culture, "
-            "or upload a photo of a dish so I can identify it and answer more specifically."
-        )
-        st.session_state.messages.append({"role": "assistant", "content": reply})
-
-    else:
-        # Kalau sudah ada makanan → gunakan rule-based answer
         food = st.session_state.current_food
         info = food_db.get(food, {})
         reply = answer_by_intent(food, user_q, info)
         st.session_state.messages.append({"role": "assistant", "content": reply})
 
-    st.rerun()
+        st.rerun()
+else:
+    st.info("📷 Please upload a food photo first to start chatting.")
 
 # =========================
-# UI — Upload & Classify (pindahkan ke bawah supaya interaksi dulu baru upload)
+# UI — Upload & Classify
 # =========================
 uploaded = st.file_uploader("Upload a food photo", type=["jpg","jpeg","png"])
 
 if uploaded and st.session_state.current_food is None:
     image = Image.open(uploaded).convert("RGB")
-    st.image(image, caption="Uploaded Image", use_column_width=True)
 
+    # Simpan ke chat history sebagai bubble image
+    st.session_state.messages.append({
+        "role": "user",
+        "type": "image",
+        "content": image
+    })
+
+    # klasifikasi
     label, conf = predict(image)
-    st.session_state.current_food = label
-    st.session_state.conf = conf
 
-    info = food_db.get(label, {})
-    intro = (
-        f"Identified as **{label}** (confidence {conf:.2f}).\n\n"
-        f"{safe_get(info, 'one_liner', safe_get(info, 'description', ''))}\n\n"
-        f"**Origin:** {safe_get(info, 'origin')}\n"
-        f"**Ingredients:** {safe_get(info, 'ingredients')}\n"
-        f"**Taste:** {safe_get(info, 'taste')}\n\n"
-        f"Now you can ask me anything about {label}: comparison, culture, price, safety, "
-        f"how to order, nutrition, variants, gluten, halal, etc."
-    )
-    st.session_state.messages.append({"role": "assistant", "content": intro})
+    if conf < 0.3:
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": f"🤔 I'm not confident enough to identify this dish (confidence {conf:.0%})."
+        })
+    else:
+        st.session_state.current_food = label
+        st.session_state.conf = conf
+        info = food_db.get(label, {})
+
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": (
+                f"✅ Identified as **{label}** (Confidence {conf:.0%}).\n\n"
+                f"{safe_get(info, 'one_liner', safe_get(info, 'description', ''))}\n\n"
+                f"**Origin:** {safe_get(info, 'origin')}\n"
+                f"\n\n**Ingredients:** {safe_get(info, 'ingredients')}\n"
+                f"\n\n**Taste:** {safe_get(info, 'taste')}\n\n"
+                f"Now you can ask me about {label} like: comparison, culture, price, safety, "
+                f"how to order, nutrition, variants, gluten and halal."
+            )
+        })
+
     st.rerun()

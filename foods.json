@@ -1,70 +1,10 @@
 {
-  "Air": {
-    "origin": "Indonesia",
-    "main_ingredients": ["water"],
-    "taste": "neutral, refreshing",
-    "description": "Air simply means water in Indonesian. It’s consumed everywhere as the main hydration source.",
-    "cultural_context": "Drunk daily at home, restaurants, and street food stalls.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Always halal",
-      "vegetarian_options": "N/A",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Air, satu gelas' (One glass of water).",
-      "price_range": "Rp 2.000 – Rp 5.000",
-      "best_places": "Anywhere, always available",
-      "safety": "Safe to drink bottled or boiled water"
-    },
-    "fun_fact": "In Indonesia, 'Air' is the most basic but essential drink."
-  },
-  "Anggur": {
-    "origin": "Imported (common from Malang and international imports)",
-    "main_ingredients": ["grapes"],
-    "taste": "sweet or tart",
-    "description": "Anggur refers to grapes, consumed fresh, in juices, or occasionally as wine in some regions.",
-    "cultural_context": "Eaten as snack or dessert; often imported varieties in markets.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes for fresh fruit; wine is not halal",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Anggur, satu porsi' (One portion of grapes).",
-      "price_range": "Rp 5.000 – Rp 15.000 per 100 grams",
-      "best_places": "Supermarkets, fruit markets",
-      "safety": "Wash before eating raw"
-    },
-    "fun_fact": "Grapes are often sold in small plastic packs at street markets in Indonesia."
-  },
-  "Apel": {
-    "origin": "Malang, East Java",
-    "main_ingredients": ["apple fruit"],
-    "taste": "sweet or slightly sour",
-    "description": "Apel is the Indonesian word for apple, eaten fresh or in desserts.",
-    "cultural_context": "Snack or dessert fruit, widely available in markets.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Apel, satu buah' (One apple).",
-      "price_range": "Rp 5.000 – Rp 15.000 each",
-      "best_places": "Fruit markets or supermarkets",
-      "safety": "Wash before eating"
-    },
-    "fun_fact": "Malang is a region famous for growing apples in Indonesia."
-  },
   "Ayam Goreng": {
     "origin": "Indonesia",
-    "main_ingredients": ["chicken", "garlic", "shallots", "spices", "oil"],
+    "ingredients": ["chicken", "garlic", "shallots", "spices", "oil"],
     "taste": "savory, crispy",
     "description": "Ayam Goreng is Indonesian fried chicken, marinated with spices then deep-fried until golden.",
-    "cultural_context": "Common everyday dish, served with rice and sambal.",
+    "culture_events": "Common everyday dish, served with rice and sambal.",
     "tips": {
       "spice_level": "Mild to medium; sambal can add heat",
       "halal": "Yes, if chicken is halal",
@@ -72,7 +12,7 @@
       "gluten_friendly": "Usually yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Ayam goreng, satu porsi' (One portion of fried chicken).",
+      "ordering": "Say: 'Ayam goreng, satu porsi' (One portion of fried chicken).",
       "price_range": "Rp 15.000 – Rp 35.000",
       "best_places": "Warungs, restaurants, street stalls",
       "safety": "Safe if freshly fried"
@@ -81,10 +21,10 @@
   },
   "Ayam Pop": {
     "origin": "Padang, West Sumatra",
-    "main_ingredients": ["chicken", "coconut water", "garlic", "spices"],
+    "ingredients": ["chicken", "coconut water", "garlic", "spices"],
     "taste": "savory, light, slightly oily",
     "description": "Ayam Pop is a Padang-style fried chicken, boiled briefly in coconut water before frying, resulting in tender, pale chicken.",
-    "cultural_context": "Served in Padang restaurants, usually with sambal and rice.",
+    "culture_events": "Served in Padang restaurants, usually with sambal and rice.",
     "tips": {
       "spice_level": "Mild; sambal adds heat",
       "halal": "Yes",
@@ -92,7 +32,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Ayam pop, satu porsi' (One portion of Ayam Pop).",
+      "ordering": "Say: 'Ayam pop, satu porsi' (One portion of Ayam Pop).",
       "price_range": "Rp 20.000 – Rp 40.000",
       "best_places": "Padang restaurants in Indonesia",
       "safety": "Safe to eat"
@@ -101,10 +41,10 @@
   },
   "Bakso": {
     "origin": "Java, Indonesia",
-    "main_ingredients": ["beef", "tapioca flour", "garlic", "salt", "pepper"],
+    "ingredients": ["beef", "tapioca flour", "garlic", "salt", "pepper"],
     "taste": "savory, umami; sometimes spicy with sambal",
     "description": "Bakso is Indonesian meatball soup, served with noodles, tofu, and vegetables. Popular street food throughout Indonesia.",
-    "cultural_context": "Eaten as affordable everyday meal; common from street carts and casual restaurants.",
+    "culture_events": "Eaten as affordable everyday meal; common from street carts and casual restaurants.",
     "tips": {
       "spice_level": "Adjustable with sambal; mild recommended for first-timers.",
       "halal": "Usually halal; ask vendor if unsure.",
@@ -112,7 +52,7 @@
       "gluten_friendly": "Watch for noodles containing wheat."
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Saya mau bakso satu mangkok' (One bowl of bakso).",
+      "ordering": "Say: 'Saya mau bakso satu mangkok' (One bowl of bakso).",
       "price_range": "Rp 10.000 – Rp 25.000 per bowl",
       "best_places": "Malang, Solo, Jakarta street stalls.",
       "safety": "Choose busy stalls; fresh hot soup is safer."
@@ -121,10 +61,10 @@
   },
   "Bakwan": {
     "origin": "Indonesia",
-    "main_ingredients": ["vegetables", "flour", "spices", "oil"],
+    "ingredients": ["vegetables", "flour", "spices", "oil"],
     "taste": "crispy, savory",
     "description": "Bakwan is Indonesian vegetable fritters, deep-fried and crunchy, commonly served as snack or side dish.",
-    "cultural_context": "Popular street snack and side for meals.",
+    "culture_events": "Popular street snack and side for meals.",
     "tips": {
       "spice_level": "Mild; usually eaten with chili sauce",
       "halal": "Yes",
@@ -132,7 +72,7 @@
       "gluten_friendly": "Contains wheat flour"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Bakwan, satu porsi' (One portion of Bakwan).",
+      "ordering": "Say: 'Bakwan, satu porsi' (One portion of Bakwan).",
       "price_range": "Rp 5.000 – Rp 15.000",
       "best_places": "Street vendors, markets",
       "safety": "Eat freshly fried for best taste"
@@ -141,16 +81,10 @@
   },
   "Batagor": {
     "origin": "Bandung, West Java",
-    "main_ingredients": [
-      "fish paste",
-      "tofu",
-      "flour",
-      "spices",
-      "peanut sauce"
-    ],
+    "ingredients": ["fish paste", "tofu", "flour", "spices", "peanut sauce"],
     "taste": "savory, slightly sweet, nutty",
     "description": "Batagor is fried fish dumplings served with peanut sauce, a famous Bandung street snack.",
-    "cultural_context": "Often eaten as snack or appetizer.",
+    "culture_events": "Often eaten as snack or appetizer.",
     "tips": {
       "spice_level": "Mild; sauce can be spicy",
       "halal": "Yes",
@@ -158,99 +92,19 @@
       "gluten_friendly": "Contains wheat"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Batagor, satu porsi' (One portion of Batagor).",
+      "ordering": "Say: 'Batagor, satu porsi' (One portion of Batagor).",
       "price_range": "Rp 10.000 – Rp 20.000",
       "best_places": "Bandung street stalls, local markets",
       "safety": "Eat freshly fried"
     },
     "fun_fact": "Batagor literally stands for 'Bakso Tahu Goreng' (Fried Tofu and Fish Balls)."
   },
-  "Bawang Merah": {
-    "origin": "Indonesia",
-    "main_ingredients": ["red onion"],
-    "taste": "pungent, slightly sweet",
-    "description": "Bawang Merah means red onion, commonly used in Indonesian cooking for flavoring.",
-    "cultural_context": "Used in sambals, stir-fries, and marinades.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Bawang merah, satu ikat' (One bunch of red onion).",
-      "price_range": "Rp 5.000 – Rp 15.000 per 100 grams",
-      "best_places": "Markets, supermarkets",
-      "safety": "Wash before cooking"
-    },
-    "fun_fact": "Red onions are staple in Indonesian kitchens for their aromatic flavor."
-  },
-  "Bawang Putih": {
-    "origin": "Indonesia",
-    "main_ingredients": ["garlic"],
-    "taste": "pungent, aromatic",
-    "description": "Bawang Putih is garlic, essential in almost all Indonesian dishes for flavor and aroma.",
-    "cultural_context": "Used in sambals, stir-fries, soups, and marinades.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Bawang putih, satu ikat' (One bunch of garlic).",
-      "price_range": "Rp 5.000 – Rp 15.000 per 100 grams",
-      "best_places": "Markets, supermarkets",
-      "safety": "Peel and wash before use"
-    },
-    "fun_fact": "Garlic is widely used in Indonesian cooking to enhance flavor."
-  },
-  "Bayam": {
-    "origin": "Indonesia",
-    "main_ingredients": ["spinach"],
-    "taste": "mild, slightly earthy",
-    "description": "Bayam is spinach, used in soups, stir-fries, and vegetable dishes.",
-    "cultural_context": "Common side vegetable in everyday meals.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Bayam, satu ikat' (One bunch of spinach).",
-      "price_range": "Rp 3.000 – Rp 10.000 per bunch",
-      "best_places": "Markets, supermarkets",
-      "safety": "Wash before cooking"
-    },
-    "fun_fact": "Spinach is popular in Indonesian soups and stir-fried dishes."
-  },
-  "Bit": {
-    "origin": "Indonesia",
-    "main_ingredients": ["beetroot"],
-    "taste": "sweet, earthy",
-    "description": "Bit means beetroot, used occasionally in salads and juices.",
-    "cultural_context": "Not common in traditional dishes, more in modern cuisine.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Bit, satu porsi' (One portion of beetroot).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Supermarkets, juice bars",
-      "safety": "Wash before eating"
-    },
-    "fun_fact": "Beetroot is often used in modern Indonesian juice blends for natural sweetness."
-  },
   "Bubur": {
     "origin": "Indonesia",
-    "main_ingredients": ["rice", "water", "salt", "optional toppings"],
+    "ingredients": ["rice", "water", "salt", "optional toppings"],
     "taste": "mild, comforting",
     "description": "Bubur is rice porridge, eaten for breakfast or when sick, often served with chicken, egg, or shredded fish.",
-    "cultural_context": "Common breakfast or comfort food.",
+    "culture_events": "Common breakfast or comfort food.",
     "tips": {
       "spice_level": "Usually mild; toppings can add flavor",
       "halal": "Yes",
@@ -258,7 +112,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Bubur ayam, satu porsi' (One portion of rice porridge with chicken).",
+      "ordering": "Say: 'Bubur ayam, satu porsi' (One portion of rice porridge with chicken).",
       "price_range": "Rp 5.000 – Rp 15.000",
       "best_places": "Street stalls, traditional markets",
       "safety": "Freshly cooked porridge is safe"
@@ -267,7 +121,7 @@
   },
   "Burger": {
     "origin": "Western origin, widely available in Indonesia",
-    "main_ingredients": [
+    "ingredients": [
       "bread",
       "beef patty",
       "lettuce",
@@ -277,7 +131,7 @@
     ],
     "taste": "savory, sometimes sweet from sauce",
     "description": "Burger is a Western fast food, popular in Indonesia with local adaptations.",
-    "cultural_context": "Eaten as fast food or snack; available in cafes and restaurants.",
+    "culture_events": "Eaten as fast food or snack; available in cafes and restaurants.",
     "tips": {
       "spice_level": "Mild to medium depending on toppings",
       "halal": "Check if beef is halal",
@@ -285,39 +139,19 @@
       "gluten_friendly": "Contains wheat in bun"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Burger, satu porsi' (One burger).",
+      "ordering": "Say: 'Burger, satu porsi' (One burger).",
       "price_range": "Rp 20.000 – Rp 50.000",
       "best_places": "Fast food chains, cafes",
       "safety": "Safe"
     },
     "fun_fact": "Indonesian burgers often include local flavors like sambal or fried egg."
   },
-  "Cabai Rawit": {
-    "origin": "Indonesia",
-    "main_ingredients": ["bird's eye chili"],
-    "taste": "very spicy",
-    "description": "Cabai Rawit is a tiny but extremely hot chili pepper, used to add heat to dishes.",
-    "cultural_context": "Frequently used in sambals and spicy dishes.",
-    "tips": {
-      "spice_level": "Very hot; use sparingly",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Cabai rawit, satu porsi' (One portion of bird's eye chili).",
-      "price_range": "Rp 5.000 – Rp 10.000 per 100 grams",
-      "best_places": "Markets",
-      "safety": "Handle with care; avoid eyes"
-    },
-    "fun_fact": "Cabai rawit is famous for being one of the spiciest chilies in Indonesia."
-  },
   "Cakwe": {
     "origin": "China, popular in Indonesia",
-    "main_ingredients": ["flour", "yeast", "salt", "oil"],
+    "ingredients": ["flour", "yeast", "salt", "oil"],
     "taste": "crispy outside, soft inside; mildly savory",
     "description": "Cakwe are deep-fried dough sticks, often eaten for breakfast or as snack with soy milk.",
-    "cultural_context": "Popular street food, breakfast item.",
+    "culture_events": "Popular street food, breakfast item.",
     "tips": {
       "spice_level": "Mild",
       "halal": "Yes",
@@ -325,7 +159,7 @@
       "gluten_friendly": "Contains wheat"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Cakwe, satu porsi' (One portion of cakwe).",
+      "ordering": "Say: 'Cakwe, satu porsi' (One portion of cakwe).",
       "price_range": "Rp 3.000 – Rp 10.000",
       "best_places": "Street stalls, traditional markets",
       "safety": "Eat freshly fried for best taste"
@@ -334,7 +168,7 @@
   },
   "Capcay": {
     "origin": "Chinese-Indonesian",
-    "main_ingredients": [
+    "ingredients": [
       "mixed vegetables",
       "chicken or shrimp",
       "garlic",
@@ -342,7 +176,7 @@
     ],
     "taste": "savory, slightly sweet",
     "description": "Capcay is a stir-fried vegetable dish often served with protein like chicken, shrimp, or fish.",
-    "cultural_context": "Common side dish in family meals and Chinese-Indonesian restaurants.",
+    "culture_events": "Common side dish in family meals and Chinese-Indonesian restaurants.",
     "tips": {
       "spice_level": "Mild",
       "halal": "Yes, if meat is halal",
@@ -350,39 +184,19 @@
       "gluten_friendly": "Check soy sauce for gluten"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Capcay, satu porsi' (One portion of Capcay).",
+      "ordering": "Say: 'Capcay, satu porsi' (One portion of Capcay).",
       "price_range": "Rp 15.000 – Rp 35.000",
       "best_places": "Chinese-Indonesian restaurants, home-cooked",
       "safety": "Safe"
     },
     "fun_fact": "Capcay literally means 'mixed vegetables' in Hokkien Chinese."
   },
-  "Chocolate Cake": {
-    "origin": "Western, popular in Indonesia",
-    "main_ingredients": ["flour", "cocoa", "sugar", "eggs", "butter"],
-    "taste": "sweet, chocolaty",
-    "description": "Chocolate Cake is a dessert enjoyed widely in Indonesia, served in cafes and restaurants.",
-    "cultural_context": "Common for birthdays, celebrations, or cafes dessert menu.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Check ingredients for gelatin/dairy",
-      "vegetarian_options": "Yes, standard",
-      "gluten_friendly": "Contains wheat"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Chocolate cake, satu potong' (One slice of chocolate cake).",
-      "price_range": "Rp 15.000 – Rp 50.000 per slice",
-      "best_places": "Cafes, bakeries",
-      "safety": "Safe"
-    },
-    "fun_fact": "Chocolate cake is often paired with coffee in Indonesian cafes."
-  },
   "Crepes": {
     "origin": "Western, adapted in Indonesia",
-    "main_ingredients": ["flour", "milk", "egg", "sugar", "butter"],
+    "ingredients": ["flour", "milk", "egg", "sugar", "butter"],
     "taste": "sweet or savory depending on filling",
     "description": "Crepes are thin pancakes that can be filled with sweet chocolate, fruit, or savory meat and cheese.",
-    "cultural_context": "Popular street snack and dessert, especially in cafes or night markets.",
+    "culture_events": "Popular street snack and dessert, especially in cafes or night markets.",
     "tips": {
       "spice_level": "N/A",
       "halal": "Check fillings; most are halal",
@@ -390,39 +204,19 @@
       "gluten_friendly": "Contains wheat"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Crepes, satu porsi' (One portion of crepes).",
+      "ordering": "Say: 'Crepes, satu porsi' (One portion of crepes).",
       "price_range": "Rp 10.000 – Rp 30.000",
       "best_places": "Street vendors, cafes, night markets",
       "safety": "Eat freshly made"
     },
     "fun_fact": "Indonesian crepes sometimes include local toppings like jackfruit or chocolate sprinkles."
   },
-  "Cumi": {
-    "origin": "Indonesia, coastal regions",
-    "main_ingredients": ["squid", "garlic", "chili", "soy sauce", "oil"],
-    "taste": "savory, slightly chewy",
-    "description": "Cumi is squid, often stir-fried, grilled, or cooked in sambal sauce.",
-    "cultural_context": "Popular in seafood dishes across coastal cities.",
-    "tips": {
-      "spice_level": "Medium to spicy",
-      "halal": "Yes",
-      "vegetarian_options": "No",
-      "gluten_friendly": "Check soy sauce"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Cumi, satu porsi' (One portion of squid).",
-      "price_range": "Rp 25.000 – Rp 60.000",
-      "best_places": "Seafood restaurants, coastal markets",
-      "safety": "Freshly cooked seafood is safe"
-    },
-    "fun_fact": "Cumi is often served with a spicy sambal sauce unique to Indonesian cuisine."
-  },
   "Dendeng Batokok": {
     "origin": "Padang, West Sumatra",
-    "main_ingredients": ["beef", "spices", "coconut oil"],
+    "ingredients": ["beef", "spices", "coconut oil"],
     "taste": "savory, slightly sweet, crispy",
     "description": "Dendeng Batokok is thinly sliced beef fried with spices, sometimes pounded to make it tender.",
-    "cultural_context": "Served in Padang restaurants, often as side dish to rice.",
+    "culture_events": "Served in Padang restaurants, often as side dish to rice.",
     "tips": {
       "spice_level": "Mild to medium",
       "halal": "Yes",
@@ -430,105 +224,19 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Dendeng Batokok, satu porsi' (One portion of Dendeng Batokok).",
+      "ordering": "Say: 'Dendeng Batokok, satu porsi' (One portion of Dendeng Batokok).",
       "price_range": "Rp 20.000 – Rp 40.000",
       "best_places": "Padang restaurants",
       "safety": "Safe"
     },
     "fun_fact": "The name 'Batokok' comes from pounding the meat thin before frying."
   },
-  "Donat": {
-    "origin": "Western, popular in Indonesia",
-    "main_ingredients": ["flour", "sugar", "egg", "butter", "yeast"],
-    "taste": "sweet, soft, slightly oily",
-    "description": "Donat is the Indonesian version of donut, eaten as snack or breakfast with various toppings.",
-    "cultural_context": "Common in street stalls and cafes.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes, check ingredients",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Contains wheat"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Donat, satu buah' (One donut).",
-      "price_range": "Rp 3.000 – Rp 10.000",
-      "best_places": "Street vendors, bakeries, cafes",
-      "safety": "Freshly made is best"
-    },
-    "fun_fact": "Indonesian donuts often have chocolate, cheese, or sprinkles as toppings."
-  },
-  "Durian": {
-    "origin": "Southeast Asia, widely in Sumatra & Java",
-    "main_ingredients": ["durian fruit"],
-    "taste": "strong, creamy, sweet",
-    "description": "Durian is known as the 'king of fruits' in Indonesia, with distinctive smell and rich creamy flesh.",
-    "cultural_context": "Eaten fresh or in desserts, popular during durian season.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Durian, satu buah' (One durian fruit).",
-      "price_range": "Rp 50.000 – Rp 150.000 per fruit",
-      "best_places": "Fruit markets, durian farms",
-      "safety": "Be careful of the strong smell; check for ripeness"
-    },
-    "fun_fact": "Durian has a very strong odor, sometimes banned in public transport in Indonesia."
-  },
-  "Es Krim": {
-    "origin": "Western, widely available in Indonesia",
-    "main_ingredients": ["milk", "sugar", "cream", "flavors"],
-    "taste": "sweet, creamy",
-    "description": "Es Krim is ice cream, popular dessert in Indonesia, available in various flavors including tropical fruits.",
-    "cultural_context": "Commonly eaten in hot weather and as dessert.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes, check ingredients",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes, if no cones with wheat"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Es krim, satu porsi' (One serving of ice cream).",
-      "price_range": "Rp 10.000 – Rp 30.000 per scoop",
-      "best_places": "Ice cream parlors, street vendors",
-      "safety": "Safe if kept frozen"
-    },
-    "fun_fact": "Local ice cream flavors include durian, mango, and coconut."
-  },
-  "French Fries": {
-    "origin": "Western, widely available in Indonesia",
-    "main_ingredients": ["potatoes", "oil", "salt"],
-    "taste": "salty, crispy",
-    "description": "French Fries are fried potato sticks, popular snack or side dish.",
-    "cultural_context": "Eaten in fast food, cafes, and as side dish in restaurants.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'French fries, satu porsi' (One portion of fries).",
-      "price_range": "Rp 10.000 – Rp 25.000",
-      "best_places": "Fast food, cafes",
-      "safety": "Safe"
-    },
-    "fun_fact": "In Indonesia, French fries are sometimes served with mayonnaise or chili sauce."
-  },
   "Fu Yung Hai": {
     "origin": "Chinese-Indonesian",
-    "main_ingredients": [
-      "egg",
-      "vegetables",
-      "meat or seafood",
-      "flour",
-      "oil"
-    ],
+    "ingredients": ["egg", "vegetables", "meat or seafood", "flour", "oil"],
     "taste": "savory, soft, slightly crispy",
     "description": "Fu Yung Hai is an Indonesian-Chinese omelet with vegetables and meat or seafood, often served with sauce.",
-    "cultural_context": "Common in family meals and Chinese-Indonesian restaurants.",
+    "culture_events": "Common in family meals and Chinese-Indonesian restaurants.",
     "tips": {
       "spice_level": "Mild",
       "halal": "Yes, if meat is halal",
@@ -536,7 +244,7 @@
       "gluten_friendly": "Check sauce"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Fu Yung Hai, satu porsi' (One portion of Fu Yung Hai).",
+      "ordering": "Say: 'Fu Yung Hai, satu porsi' (One portion of Fu Yung Hai).",
       "price_range": "Rp 15.000 – Rp 35.000",
       "best_places": "Chinese-Indonesian restaurants",
       "safety": "Safe"
@@ -545,10 +253,10 @@
   },
   "Gado-Gado": {
     "origin": "Indonesia",
-    "main_ingredients": ["vegetables", "tofu", "tempeh", "peanut sauce", "egg"],
+    "ingredients": ["vegetables", "tofu", "tempeh", "peanut sauce", "egg"],
     "taste": "savory, slightly sweet, nutty",
     "description": "Gado-Gado is an Indonesian salad of blanched vegetables with peanut sauce, often served with rice cakes.",
-    "cultural_context": "Common street food and home dish.",
+    "culture_events": "Common street food and home dish.",
     "tips": {
       "spice_level": "Mild to medium; can add chili",
       "halal": "Yes",
@@ -556,7 +264,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Gado-gado, satu porsi' (One portion of Gado-Gado).",
+      "ordering": "Say: 'Gado-gado, satu porsi' (One portion of Gado-Gado).",
       "price_range": "Rp 10.000 – Rp 25.000",
       "best_places": "Street vendors, traditional markets, restaurants",
       "safety": "Freshly prepared is safe"
@@ -565,15 +273,10 @@
   },
   "Gudeg": {
     "origin": "Yogyakarta, Central Java",
-    "main_ingredients": [
-      "young jackfruit",
-      "coconut milk",
-      "palm sugar",
-      "spices"
-    ],
+    "ingredients": ["young jackfruit", "coconut milk", "palm sugar", "spices"],
     "taste": "sweet, savory, rich",
     "description": "Gudeg is a traditional Javanese dish made from young jackfruit stewed in coconut milk and palm sugar.",
-    "cultural_context": "Often eaten for breakfast with rice, chicken, and sambal krecek; iconic Yogyakarta food.",
+    "culture_events": "Often eaten for breakfast with rice, chicken, and sambal krecek; iconic Yogyakarta food.",
     "tips": {
       "spice_level": "Mild",
       "halal": "Yes",
@@ -581,7 +284,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Gudeg, satu porsi' (One portion of Gudeg).",
+      "ordering": "Say: 'Gudeg, satu porsi' (One portion of Gudeg).",
       "price_range": "Rp 15.000 – Rp 30.000",
       "best_places": "Yogyakarta, traditional food stalls",
       "safety": "Safe"
@@ -590,16 +293,10 @@
   },
   "Gulai Ikan": {
     "origin": "Indonesia, especially Sumatra & Java",
-    "main_ingredients": [
-      "fish",
-      "coconut milk",
-      "turmeric",
-      "chili",
-      "lemongrass"
-    ],
+    "ingredients": ["fish", "coconut milk", "turmeric", "chili", "lemongrass"],
     "taste": "spicy, savory, rich",
     "description": "Gulai Ikan is a fish curry cooked in coconut milk with aromatic spices.",
-    "cultural_context": "Common in coastal areas and traditional ceremonies.",
+    "culture_events": "Common in coastal areas and traditional ceremonies.",
     "tips": {
       "spice_level": "Medium to spicy",
       "halal": "Yes",
@@ -607,7 +304,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Gulai Ikan, satu porsi' (One portion of fish curry).",
+      "ordering": "Say: 'Gulai Ikan, satu porsi' (One portion of fish curry).",
       "price_range": "Rp 25.000 – Rp 60.000",
       "best_places": "Seafood restaurants, local warungs",
       "safety": "Fresh fish recommended"
@@ -616,10 +313,10 @@
   },
   "Gulai Tambusu": {
     "origin": "Makassar, South Sulawesi",
-    "main_ingredients": ["cow's intestine", "coconut milk", "spices"],
+    "ingredients": ["cow's intestine", "coconut milk", "spices"],
     "taste": "savory, rich, slightly spicy",
     "description": "Gulai Tambusu is cow intestine stuffed with spicy meat mixture and cooked in coconut milk curry.",
-    "cultural_context": "Traditional Makassar dish; often eaten during gatherings.",
+    "culture_events": "Traditional Makassar dish; often eaten during gatherings.",
     "tips": {
       "spice_level": "Medium",
       "halal": "Yes",
@@ -627,7 +324,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Gulai Tambusu, satu porsi'.",
+      "ordering": "Say: 'Gulai Tambusu, satu porsi'.",
       "price_range": "Rp 30.000 – Rp 60.000",
       "best_places": "Makassar traditional restaurants",
       "safety": "Eat freshly cooked; ensure intestines are properly cleaned"
@@ -636,10 +333,10 @@
   },
   "Gulai Tunjang": {
     "origin": "Padang, West Sumatra",
-    "main_ingredients": ["beef tendon", "coconut milk", "spices"],
+    "ingredients": ["beef tendon", "coconut milk", "spices"],
     "taste": "savory, gelatinous, spicy",
     "description": "Gulai Tunjang is beef tendon cooked in rich spicy coconut milk curry.",
-    "cultural_context": "Often served in Padang restaurants; considered a delicacy.",
+    "culture_events": "Often served in Padang restaurants; considered a delicacy.",
     "tips": {
       "spice_level": "Medium to hot",
       "halal": "Yes",
@@ -647,7 +344,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Gulai Tunjang, satu porsi'.",
+      "ordering": "Say: 'Gulai Tunjang, satu porsi'.",
       "price_range": "Rp 30.000 – Rp 60.000",
       "best_places": "Padang restaurants",
       "safety": "Safe if cooked properly"
@@ -656,7 +353,7 @@
   },
   "Gyoza": {
     "origin": "Japan, popular in Indonesia",
-    "main_ingredients": [
+    "ingredients": [
       "dumpling wrapper",
       "ground meat",
       "cabbage",
@@ -665,7 +362,7 @@
     ],
     "taste": "savory, slightly chewy",
     "description": "Gyoza are Japanese dumplings often fried or steamed, served with dipping sauce.",
-    "cultural_context": "Available in Japanese restaurants and street stalls in Indonesia.",
+    "culture_events": "Available in Japanese restaurants and street stalls in Indonesia.",
     "tips": {
       "spice_level": "Mild",
       "halal": "Check meat type",
@@ -673,7 +370,7 @@
       "gluten_friendly": "Check wrapper"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Gyoza, satu porsi'.",
+      "ordering": "Say: 'Gyoza, satu porsi'.",
       "price_range": "Rp 20.000 – Rp 50.000",
       "best_places": "Japanese restaurants, food courts",
       "safety": "Safe"
@@ -682,10 +379,10 @@
   },
   "Ikan": {
     "origin": "Indonesia, general term",
-    "main_ingredients": ["fresh fish"],
+    "ingredients": ["fresh fish"],
     "taste": "depends on cooking style; savory",
     "description": "Ikan refers to fish; can be grilled, fried, or in curries.",
-    "cultural_context": "Staple protein in coastal diets.",
+    "culture_events": "Staple protein in coastal diets.",
     "tips": {
       "spice_level": "Varies",
       "halal": "Yes",
@@ -693,7 +390,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Ikan, satu porsi'.",
+      "ordering": "Say: 'Ikan, satu porsi'.",
       "price_range": "Rp 20.000 – Rp 60.000 depending on type",
       "best_places": "Seafood markets, restaurants",
       "safety": "Ensure freshness"
@@ -702,10 +399,10 @@
   },
   "Ikan Goreng": {
     "origin": "Indonesia",
-    "main_ingredients": ["fresh fish", "salt", "turmeric", "oil"],
+    "ingredients": ["fresh fish", "salt", "turmeric", "oil"],
     "taste": "savory, crispy",
     "description": "Fried fish, usually seasoned with turmeric and salt, served with sambal and rice.",
-    "cultural_context": "Common in households and restaurants; daily meal.",
+    "culture_events": "Common in households and restaurants; daily meal.",
     "tips": {
       "spice_level": "Mild to medium if sambal added",
       "halal": "Yes",
@@ -713,116 +410,16 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Ikan Goreng, satu porsi'.",
+      "ordering": "Say: 'Ikan Goreng, satu porsi'.",
       "price_range": "Rp 20.000 – Rp 50.000",
       "best_places": "Warungs, seafood restaurants",
       "safety": "Safe if freshly fried"
     },
     "fun_fact": "Simple but very popular street food in Indonesia."
   },
-  "Jagung": {
-    "origin": "Indonesia",
-    "main_ingredients": ["corn", "salt", "butter or coconut milk"],
-    "taste": "sweet or savory depending on preparation",
-    "description": "Jagung (corn) is eaten boiled, grilled, or as sweet snacks like jagung bakar or jagung manis.",
-    "cultural_context": "Common street snack, especially in markets.",
-    "tips": {
-      "spice_level": "Mild",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Jagung bakar, satu buah' (One grilled corn).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Street vendors, night markets",
-      "safety": "Safe when cooked"
-    },
-    "fun_fact": "Grilled corn is often served with butter, salt, and chili powder."
-  },
-  "Jahe": {
-    "origin": "Indonesia",
-    "main_ingredients": ["ginger", "sugar or honey", "water"],
-    "taste": "spicy, warm, slightly sweet",
-    "description": "Jahe refers to ginger; often used in drinks like teh jahe (ginger tea) or snacks.",
-    "cultural_context": "Common traditional remedy and beverage, especially in cold or rainy weather.",
-    "tips": {
-      "spice_level": "Mild to spicy",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Teh Jahe, satu gelas' (One cup of ginger tea).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Street vendors, traditional cafés",
-      "safety": "Safe and healthy"
-    },
-    "fun_fact": "Ginger tea is believed to help digestion and warm the body."
-  },
-  "Jeruk": {
-    "origin": "Indonesia, local citrus",
-    "main_ingredients": ["orange or tangerine"],
-    "taste": "sweet, tangy",
-    "description": "Jeruk is citrus fruit, often served as fresh juice (jus jeruk) or eaten raw.",
-    "cultural_context": "Common fruit and drink in Indonesia.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Jus jeruk, satu gelas' (One glass of orange juice).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Street vendors, cafes, markets",
-      "safety": "Freshly squeezed juice is safe"
-    },
-    "fun_fact": "Indonesian oranges are juicy and often sweeter than imported varieties."
-  },
-  "Kacang": {
-    "origin": "Indonesia",
-    "main_ingredients": ["peanuts", "salt", "oil", "sugar"],
-    "taste": "savory, nutty, slightly sweet",
-    "description": "Kacang refers to peanuts, commonly eaten roasted, fried, or as snacks like kacang bawang.",
-    "cultural_context": "Popular as snack in markets, street vendors, and traditional gatherings.",
-    "tips": {
-      "spice_level": "Mild",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Kacang, satu porsi' (One portion of peanuts).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Markets, street stalls",
-      "safety": "Safe if freshly roasted"
-    },
-    "fun_fact": "Peanuts are often used in Indonesian sauces like peanut sauce for Gado-Gado or Satay."
-  },
-  "Kacang Kedelai": {
-    "origin": "Indonesia, East Asia",
-    "main_ingredients": ["soybeans", "salt", "water"],
-    "taste": "savory or sweet depending on preparation",
-    "description": "Kacang Kedelai (soybeans) are used in various Indonesian foods like tofu, tempeh, and soy milk.",
-    "cultural_context": "Staple ingredient and protein source in Indonesia.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Tempeh, satu porsi' (One portion of tempeh).",
-      "price_range": "Rp 5.000 – Rp 20.000",
-      "best_places": "Markets, warungs",
-      "safety": "Safe and healthy"
-    },
-    "fun_fact": "Tempeh, made from fermented soybeans, is a traditional Indonesian protein source."
-  },
   "Kebab": {
     "origin": "Middle East, popular in Indonesia",
-    "main_ingredients": [
+    "ingredients": [
       "meat (chicken or beef)",
       "spices",
       "bread or wrap",
@@ -830,7 +427,7 @@
     ],
     "taste": "savory, spicy, aromatic",
     "description": "Kebab is grilled meat with spices, served in bread or as wrap, popular street food in Indonesia.",
-    "cultural_context": "Found in street stalls, food courts, and Middle Eastern restaurants.",
+    "culture_events": "Found in street stalls, food courts, and Middle Eastern restaurants.",
     "tips": {
       "spice_level": "Mild to spicy depending on sauce",
       "halal": "Yes, usually",
@@ -838,7 +435,7 @@
       "gluten_friendly": "No, contains bread/wrap"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Kebab, satu porsi' (One kebab).",
+      "ordering": "Say: 'Kebab, satu porsi' (One kebab).",
       "price_range": "Rp 15.000 – Rp 40.000",
       "best_places": "Street vendors, food courts",
       "safety": "Freshly cooked is safe"
@@ -847,14 +444,10 @@
   },
   "Kelepon": {
     "origin": "Java, Indonesia",
-    "main_ingredients": [
-      "glutinous rice flour",
-      "palm sugar",
-      "grated coconut"
-    ],
+    "ingredients": ["glutinous rice flour", "palm sugar", "grated coconut"],
     "taste": "sweet, soft, chewy",
     "description": "Kelepon are sweet rice cakes filled with liquid palm sugar, coated in grated coconut.",
-    "cultural_context": "Traditional snack served during gatherings and ceremonies.",
+    "culture_events": "Traditional snack served during gatherings and ceremonies.",
     "tips": {
       "spice_level": "N/A",
       "halal": "Yes",
@@ -862,39 +455,19 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Kelepon, satu porsi' (One portion of Kelepon).",
+      "ordering": "Say: 'Kelepon, satu porsi' (One portion of Kelepon).",
       "price_range": "Rp 5.000 – Rp 15.000",
       "best_places": "Traditional markets, street stalls",
       "safety": "Freshly made is best"
     },
     "fun_fact": "Kelepon has a liquid palm sugar center that bursts in your mouth when eaten."
   },
-  "Kentang": {
-    "origin": "Indonesia",
-    "main_ingredients": ["potatoes", "oil", "salt"],
-    "taste": "savory, crispy or soft depending on preparation",
-    "description": "Kentang is potato; served boiled, fried, mashed, or as fries.",
-    "cultural_context": "Common side dish or snack.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Kentang goreng, satu porsi' (One portion of fried potatoes).",
-      "price_range": "Rp 10.000 – Rp 25.000",
-      "best_places": "Street vendors, restaurants",
-      "safety": "Safe if freshly cooked"
-    },
-    "fun_fact": "Potatoes are widely used in Indonesian snacks and side dishes."
-  },
   "Kerupuk": {
     "origin": "Indonesia",
-    "main_ingredients": ["tapioca flour", "shrimp or fish powder", "salt"],
+    "ingredients": ["tapioca flour", "shrimp or fish powder", "salt"],
     "taste": "crispy, savory",
     "description": "Kerupuk are Indonesian crackers, often served as snack or side dish with meals.",
-    "cultural_context": "Popular in daily meals and traditional celebrations.",
+    "culture_events": "Popular in daily meals and traditional celebrations.",
     "tips": {
       "spice_level": "Mild",
       "halal": "Yes",
@@ -902,144 +475,19 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Kerupuk, satu porsi' (One portion of crackers).",
+      "ordering": "Say: 'Kerupuk, satu porsi' (One portion of crackers).",
       "price_range": "Rp 2.000 – Rp 10.000",
       "best_places": "Markets, warungs",
       "safety": "Safe"
     },
     "fun_fact": "Kerupuk are often deep-fried just before eating to retain crispiness."
   },
-  "Ketimun": {
-    "origin": "Indonesia",
-    "main_ingredients": ["cucumber"],
-    "taste": "fresh, crisp, slightly sweet",
-    "description": "Ketimun (cucumber) is often eaten raw, in salads, or as garnish.",
-    "cultural_context": "Used in fresh dishes, side dishes, and sambal lalapan.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Ketimun, satu porsi' (One portion of cucumber).",
-      "price_range": "Rp 2.000 – Rp 10.000",
-      "best_places": "Markets, restaurants",
-      "safety": "Safe"
-    },
-    "fun_fact": "Cucumber is often eaten with spicy sambal to balance flavors."
-  },
-  "Kopi": {
-    "origin": "Indonesia",
-    "main_ingredients": ["coffee beans", "water", "sugar or milk optional"],
-    "taste": "bitter, aromatic, can be sweetened",
-    "description": "Kopi is Indonesian coffee, served black, sweetened, or with condensed milk.",
-    "cultural_context": "Common morning beverage, street stalls, cafes.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Kopi, satu gelas' (One cup of coffee).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Coffee shops, street vendors",
-      "safety": "Safe"
-    },
-    "fun_fact": "Indonesia is the fourth largest coffee producer in the world, famous for Sumatra and Java beans."
-  },
-  "Kubis": {
-    "origin": "Indonesia",
-    "main_ingredients": ["cabbage"],
-    "taste": "mild, slightly sweet",
-    "description": "Kubis (cabbage) is used in soups, stir-fries, and salads.",
-    "cultural_context": "Common ingredient in daily meals.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Kubis, satu porsi' (One portion of cabbage).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Markets, restaurants",
-      "safety": "Safe"
-    },
-    "fun_fact": "Cabbage is often served raw with sambal lalapan or cooked in soups."
-  },
-  "Kue Lumpur": {
-    "origin": "Indonesia, Java",
-    "main_ingredients": ["potatoes", "coconut milk", "sugar", "eggs", "flour"],
-    "taste": "sweet, creamy, soft",
-    "description": "Kue Lumpur is a traditional Indonesian cake made from mashed potatoes, coconut milk, and eggs.",
-    "cultural_context": "Often served during traditional ceremonies or as snack.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Depends on flour used"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Kue Lumpur, satu porsi' (One portion of Kue Lumpur).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Traditional markets, street vendors",
-      "safety": "Safe if freshly made"
-    },
-    "fun_fact": "Despite its name 'Lumpur' (mud), it refers to the soft and moist texture."
-  },
-  "Lemon": {
-    "origin": "Indonesia, local citrus",
-    "main_ingredients": ["lemon fruit"],
-    "taste": "sour, tangy, refreshing",
-    "description": "Lemon is commonly used for juice, seasoning, and flavoring drinks or dishes.",
-    "cultural_context": "Used in beverages, marinades, and desserts.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Jus lemon, satu gelas' (One glass of lemon juice).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Street vendors, cafes, markets",
-      "safety": "Safe when freshly squeezed"
-    },
-    "fun_fact": "Lemon juice is often mixed with honey and ginger as a traditional health drink."
-  },
-  "Mangga": {
-    "origin": "Indonesia",
-    "main_ingredients": ["mango fruit"],
-    "taste": "sweet, tropical, juicy",
-    "description": "Mangga (mango) is eaten fresh or used in desserts, smoothies, and salads.",
-    "cultural_context": "Common seasonal fruit, often in traditional snacks.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Mangga, satu porsi' (One portion of mango).",
-      "price_range": "Rp 5.000 – Rp 20.000",
-      "best_places": "Markets, fruit stalls, street vendors",
-      "safety": "Wash or peel before eating"
-    },
-    "fun_fact": "Indonesia has many sweet mango varieties, especially from Java and Bali."
-  },
   "Mie Goreng": {
     "origin": "Indonesia",
-    "main_ingredients": [
-      "egg noodles",
-      "soy sauce",
-      "vegetables",
-      "meat or tofu"
-    ],
+    "ingredients": ["egg noodles", "soy sauce", "vegetables", "meat or tofu"],
     "taste": "savory, slightly sweet, umami",
     "description": "Mie Goreng is Indonesian fried noodles, commonly stir-fried with vegetables, eggs, and protein.",
-    "cultural_context": "Popular street food, breakfast or dinner dish.",
+    "culture_events": "Popular street food, breakfast or dinner dish.",
     "tips": {
       "spice_level": "Mild to spicy depending on chili",
       "halal": "Yes",
@@ -1047,36 +495,16 @@
       "gluten_friendly": "Contains wheat noodles"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Mie Goreng, satu porsi'.",
+      "ordering": "Say: 'Mie Goreng, satu porsi'.",
       "price_range": "Rp 10.000 – Rp 30.000",
       "best_places": "Street stalls, warungs",
       "safety": "Safe if freshly cooked"
     },
     "fun_fact": "Mie Goreng is a popular comfort food across Indonesia and often customized with local flavors."
   },
-  "Nanas": {
-    "origin": "Indonesia, tropical regions",
-    "main_ingredients": ["pineapple fruit"],
-    "taste": "sweet, tangy, juicy",
-    "description": "Nanas (pineapple) is eaten fresh, in desserts, or as juice.",
-    "cultural_context": "Common tropical fruit available year-round.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Nanas, satu porsi' (One portion of pineapple).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Markets, street vendors, fruit stalls",
-      "safety": "Wash before eating"
-    },
-    "fun_fact": "Pineapple is often used in Indonesian fruit rujak (fruit salad with spicy palm sugar dressing)."
-  },
   "Nasi Goreng": {
     "origin": "Indonesia",
-    "main_ingredients": [
+    "ingredients": [
       "rice",
       "soy sauce",
       "vegetables",
@@ -1085,7 +513,7 @@
     ],
     "taste": "savory, slightly sweet, aromatic",
     "description": "Nasi Goreng is Indonesian fried rice, often topped with fried egg and served with crackers.",
-    "cultural_context": "National dish, eaten for any meal; street food and restaurants.",
+    "culture_events": "National dish, eaten for any meal; street food and restaurants.",
     "tips": {
       "spice_level": "Mild to spicy depending on chili",
       "halal": "Yes",
@@ -1093,7 +521,7 @@
       "gluten_friendly": "Check soy sauce"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Nasi Goreng, satu porsi'.",
+      "ordering": "Say: 'Nasi Goreng, satu porsi'.",
       "price_range": "Rp 10.000 – Rp 30.000",
       "best_places": "Street stalls, warungs, hotels",
       "safety": "Safe if cooked fresh"
@@ -1102,10 +530,10 @@
   },
   "Nasi Padang": {
     "origin": "Padang, West Sumatra",
-    "main_ingredients": ["rice", "beef rendang", "vegetables", "spicy sambal"],
+    "ingredients": ["rice", "beef rendang", "vegetables", "spicy sambal"],
     "taste": "spicy, savory, rich",
     "description": "Nasi Padang is steamed rice served with various dishes from Padang cuisine.",
-    "cultural_context": "Padang restaurants display dishes buffet-style; pay for what you eat.",
+    "culture_events": "Padang restaurants display dishes buffet-style; pay for what you eat.",
     "tips": {
       "spice_level": "Medium to spicy",
       "halal": "Yes",
@@ -1113,7 +541,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Nasi Padang, satu porsi'.",
+      "ordering": "Say: 'Nasi Padang, satu porsi'.",
       "price_range": "Rp 20.000 – Rp 50.000",
       "best_places": "Padang restaurants across Indonesia",
       "safety": "Safe if cooked fresh"
@@ -1122,10 +550,10 @@
   },
   "Onion Rings": {
     "origin": "Western influence, popular in Indonesia",
-    "main_ingredients": ["onion", "flour", "oil", "breadcrumbs"],
+    "ingredients": ["onion", "flour", "oil", "breadcrumbs"],
     "taste": "crispy, savory, slightly sweet",
     "description": "Onion rings are sliced onions coated in batter and fried until crispy.",
-    "cultural_context": "Popular snack or side dish in fast-food and cafes.",
+    "culture_events": "Popular snack or side dish in fast-food and cafes.",
     "tips": {
       "spice_level": "Mild",
       "halal": "Yes",
@@ -1133,139 +561,19 @@
       "gluten_friendly": "Contains wheat"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Onion Rings, satu porsi'.",
+      "ordering": "Say: 'Onion Rings, satu porsi'.",
       "price_range": "Rp 10.000 – Rp 25.000",
       "best_places": "Fast food restaurants, cafes",
       "safety": "Safe if freshly fried"
     },
     "fun_fact": "Onion rings are a favorite side snack with burgers in Indonesia."
   },
-  "Pancakes": {
-    "origin": "Western influence, popular in Indonesia",
-    "main_ingredients": ["flour", "milk", "eggs", "sugar", "butter"],
-    "taste": "sweet, soft, fluffy",
-    "description": "Pancakes are flat cakes, often served with syrup, fruit, or chocolate toppings.",
-    "cultural_context": "Breakfast item and dessert; cafes widely serve it.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Contains wheat"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Pancakes, satu porsi'.",
-      "price_range": "Rp 20.000 – Rp 50.000",
-      "best_places": "Cafes, restaurants",
-      "safety": "Safe"
-    },
-    "fun_fact": "Indonesian cafes often serve pancakes with tropical fruits like mango or banana."
-  },
-  "Paprika": {
-    "origin": "Indonesia",
-    "main_ingredients": ["bell peppers"],
-    "taste": "sweet, slightly crunchy",
-    "description": "Paprika (bell peppers) are often used in stir-fries, salads, and side dishes.",
-    "cultural_context": "Common vegetable in modern and traditional Indonesian cooking.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Paprika, satu porsi' (One portion of bell peppers).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Markets, restaurants",
-      "safety": "Safe if fresh"
-    },
-    "fun_fact": "Paprika adds color and sweetness to Indonesian stir-fry dishes."
-  },
-  "Pepaya": {
-    "origin": "Indonesia",
-    "main_ingredients": ["papaya fruit"],
-    "taste": "sweet, tropical, soft",
-    "description": "Pepaya (papaya) is eaten fresh, in fruit salads, juices, or desserts.",
-    "cultural_context": "Common tropical fruit; often part of traditional rujak or fruit platters.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Pepaya, satu porsi' (One portion of papaya).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Markets, street vendors, cafes",
-      "safety": "Wash before eating"
-    },
-    "fun_fact": "Pepaya contains enzymes that aid digestion, commonly served after meals."
-  },
-  "Pisang": {
-    "origin": "Indonesia",
-    "main_ingredients": ["banana"],
-    "taste": "sweet, soft, creamy",
-    "description": "Pisang (banana) is eaten fresh, fried as Pisang Goreng, or in desserts.",
-    "cultural_context": "Popular snack and breakfast item throughout Indonesia.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Pisang goreng, satu porsi' (One portion of fried banana).",
-      "price_range": "Rp 5.000 – Rp 20.000",
-      "best_places": "Street vendors, markets, cafes",
-      "safety": "Safe if freshly fried"
-    },
-    "fun_fact": "Indonesia is famous for a wide variety of bananas, often used in traditional desserts like Pisang Ijo."
-  },
-  "Pizza": {
-    "origin": "Western influence, popular in Indonesia",
-    "main_ingredients": ["flour", "cheese", "tomato sauce", "toppings"],
-    "taste": "savory, cheesy, aromatic",
-    "description": "Pizza is baked dough topped with tomato sauce, cheese, and various toppings.",
-    "cultural_context": "Found in cafes, fast-food chains, and fusion restaurants.",
-    "tips": {
-      "spice_level": "Mild to moderate",
-      "halal": "Yes, if halal-certified toppings used",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Contains wheat"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Pizza, satu porsi'.",
-      "price_range": "Rp 30.000 – Rp 100.000",
-      "best_places": "Restaurants, cafes, pizza chains",
-      "safety": "Safe"
-    },
-    "fun_fact": "Pizza in Indonesia often includes local toppings like spicy sambal or chicken rendang."
-  },
-  "Ramen": {
-    "origin": "Japanese influence, popular in Indonesia",
-    "main_ingredients": ["noodles", "broth", "meat", "vegetables", "egg"],
-    "taste": "savory, umami-rich, sometimes spicy",
-    "description": "Ramen is noodle soup served with flavorful broth, protein, and vegetables.",
-    "cultural_context": "Popular Japanese cuisine enjoyed in urban areas.",
-    "tips": {
-      "spice_level": "Mild to spicy depending on soup",
-      "halal": "Check meat used",
-      "vegetarian_options": "Some restaurants offer vegetable ramen",
-      "gluten_friendly": "Contains wheat noodles"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Ramen, satu porsi'.",
-      "price_range": "Rp 30.000 – Rp 80.000",
-      "best_places": "Japanese restaurants, ramen shops",
-      "safety": "Safe if freshly cooked"
-    },
-    "fun_fact": "Some Indonesian ramen versions mix local spices and sambal into the broth."
-  },
   "Rawon": {
     "origin": "East Java, Indonesia",
-    "main_ingredients": ["beef", "kluwek nuts", "spices", "rice"],
+    "ingredients": ["beef", "kluwek nuts", "spices", "rice"],
     "taste": "savory, dark, earthy",
     "description": "Rawon is a traditional beef soup with dark black broth from kluwek nuts.",
-    "cultural_context": "Served as daily meal or special occasions in East Java.",
+    "culture_events": "Served as daily meal or special occasions in East Java.",
     "tips": {
       "spice_level": "Mild to medium",
       "halal": "Yes",
@@ -1273,7 +581,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Rawon, satu porsi'.",
+      "ordering": "Say: 'Rawon, satu porsi'.",
       "price_range": "Rp 20.000 – Rp 40.000",
       "best_places": "Surabaya, Malang, traditional eateries",
       "safety": "Safe if freshly cooked"
@@ -1282,10 +590,10 @@
   },
   "Rendang": {
     "origin": "West Sumatra, Indonesia",
-    "main_ingredients": ["beef", "coconut milk", "spices", "chili"],
+    "ingredients": ["beef", "coconut milk", "spices", "chili"],
     "taste": "spicy, rich, savory",
     "description": "Rendang is slow-cooked beef in coconut milk and a mixture of rich spices.",
-    "cultural_context": "Traditional dish for ceremonies and festive occasions.",
+    "culture_events": "Traditional dish for ceremonies and festive occasions.",
     "tips": {
       "spice_level": "Medium to high",
       "halal": "Yes",
@@ -1293,7 +601,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Rendang, satu porsi'.",
+      "ordering": "Say: 'Rendang, satu porsi'.",
       "price_range": "Rp 30.000 – Rp 70.000",
       "best_places": "Padang restaurants, West Sumatra",
       "safety": "Safe if freshly prepared"
@@ -1302,10 +610,10 @@
   },
   "Risoles": {
     "origin": "Indonesia, Dutch influence",
-    "main_ingredients": ["flour", "egg", "vegetables", "meat", "bread crumbs"],
+    "ingredients": ["flour", "egg", "vegetables", "meat", "bread crumbs"],
     "taste": "savory, crispy",
     "description": "Risoles are fried rolls filled with vegetables, meat, or cheese.",
-    "cultural_context": "Served at parties, gatherings, and as snack food.",
+    "culture_events": "Served at parties, gatherings, and as snack food.",
     "tips": {
       "spice_level": "Mild",
       "halal": "Yes",
@@ -1313,36 +621,16 @@
       "gluten_friendly": "Contains wheat"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Risoles, satu porsi'.",
+      "ordering": "Say: 'Risoles, satu porsi'.",
       "price_range": "Rp 5.000 – Rp 15.000",
       "best_places": "Markets, street stalls, party catering",
       "safety": "Safe if freshly fried"
     },
     "fun_fact": "Risoles are inspired by Dutch croquettes but adapted to Indonesian tastes."
   },
-  "Sashimi": {
-    "origin": "Japanese influence, popular in Indonesia",
-    "main_ingredients": ["raw fish", "soy sauce", "wasabi", "ginger"],
-    "taste": "fresh, delicate, umami",
-    "description": "Sashimi is thinly sliced raw fish served with condiments.",
-    "cultural_context": "Served in Japanese restaurants and fine dining settings.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Check seafood and preparation",
-      "vegetarian_options": "N/A",
-      "gluten_friendly": "Yes if soy sauce is gluten-free"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Sashimi, satu porsi'.",
-      "price_range": "Rp 50.000 – Rp 150.000",
-      "best_places": "Japanese restaurants, sushi bars",
-      "safety": "Ensure freshness for safety"
-    },
-    "fun_fact": "Sashimi emphasizes freshness; fish is often caught the same day."
-  },
   "Sate": {
     "origin": "Indonesia",
-    "main_ingredients": [
+    "ingredients": [
       "meat (chicken, beef, or lamb)",
       "skewers",
       "spices",
@@ -1350,7 +638,7 @@
     ],
     "taste": "savory, smoky, slightly sweet",
     "description": "Sate (satay) is skewered and grilled meat served with peanut sauce or spicy sauce.",
-    "cultural_context": "Popular street food and traditional festival food.",
+    "culture_events": "Popular street food and traditional festival food.",
     "tips": {
       "spice_level": "Mild to medium depending on sauce",
       "halal": "Yes",
@@ -1358,36 +646,16 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Sate ayam, satu porsi'.",
+      "ordering": "Say: 'Sate ayam, satu porsi'.",
       "price_range": "Rp 10.000 – Rp 30.000",
       "best_places": "Street vendors, night markets",
       "safety": "Safe if freshly grilled"
     },
     "fun_fact": "Satay is one of Indonesia's most iconic dishes and comes in hundreds of regional varieties."
   },
-  "Semangka": {
-    "origin": "Indonesia",
-    "main_ingredients": ["watermelon"],
-    "taste": "sweet, juicy, refreshing",
-    "description": "Semangka (watermelon) is a popular tropical fruit, eaten fresh or as juice.",
-    "cultural_context": "Often served as dessert or snack, especially during hot weather.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Semangka, satu porsi' (One portion of watermelon).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Markets, street vendors, fruit stalls",
-      "safety": "Wash or peel before eating"
-    },
-    "fun_fact": "Semangka is rich in hydration and often served chilled in Indonesia’s tropical climate."
-  },
   "Soto": {
     "origin": "Indonesia",
-    "main_ingredients": [
+    "ingredients": [
       "chicken or beef",
       "broth",
       "rice or noodles",
@@ -1396,7 +664,7 @@
     ],
     "taste": "savory, aromatic, slightly spicy",
     "description": "Soto is a traditional Indonesian soup with meat, vegetables, and aromatic spices.",
-    "cultural_context": "Popular comfort food for breakfast, lunch, or dinner.",
+    "culture_events": "Popular comfort food for breakfast, lunch, or dinner.",
     "tips": {
       "spice_level": "Mild to medium; sambal can be added",
       "halal": "Yes",
@@ -1404,65 +672,19 @@
       "gluten_friendly": "Yes if served with rice"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Soto ayam, satu porsi' (One portion of chicken soto).",
+      "ordering": "Say: 'Soto ayam, satu porsi' (One portion of chicken soto).",
       "price_range": "Rp 15.000 – Rp 35.000",
       "best_places": "Traditional warungs, street vendors, markets",
       "safety": "Safe if freshly cooked"
     },
     "fun_fact": "Soto has hundreds of regional variations across Indonesia, each with unique spices and ingredients."
   },
-  "Sushi": {
-    "origin": "Japanese influence, popular in Indonesia",
-    "main_ingredients": [
-      "rice",
-      "vinegar",
-      "raw fish or seafood",
-      "seaweed",
-      "vegetables"
-    ],
-    "taste": "savory, fresh, slightly sweet",
-    "description": "Sushi is vinegared rice with toppings, typically raw fish, vegetables, or seafood.",
-    "cultural_context": "Served in Japanese restaurants and sushi bars.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Check ingredients",
-      "vegetarian_options": "Yes, vegetable rolls",
-      "gluten_friendly": "Yes if soy sauce is gluten-free"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Sushi, satu porsi'.",
-      "price_range": "Rp 50.000 – Rp 150.000",
-      "best_places": "Japanese restaurants, sushi bars",
-      "safety": "Ensure freshness of raw fish"
-    },
-    "fun_fact": "Sushi emphasizes freshness and presentation; Indonesia has localized versions with tropical fish."
-  },
-  "Takoyaki": {
-    "origin": "Japanese influence, popular in Indonesia",
-    "main_ingredients": ["octopus", "flour", "egg", "toppings", "sauce"],
-    "taste": "savory, slightly sweet, soft inside",
-    "description": "Takoyaki are ball-shaped snacks filled with diced octopus, cooked in special molds.",
-    "cultural_context": "Popular street food, often sold at night markets.",
-    "tips": {
-      "spice_level": "Mild",
-      "halal": "Check fillings",
-      "vegetarian_options": "Some versions without seafood exist",
-      "gluten_friendly": "Contains wheat flour"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Takoyaki, satu porsi'.",
-      "price_range": "Rp 20.000 – Rp 40.000",
-      "best_places": "Night markets, street food stalls",
-      "safety": "Safe if freshly cooked"
-    },
-    "fun_fact": "Takoyaki originated in Osaka, Japan, but has become a favorite snack in Indonesia’s urban areas."
-  },
   "Telur Balado": {
     "origin": "West Sumatra, Indonesia",
-    "main_ingredients": ["eggs", "chili", "tomato", "spices"],
+    "ingredients": ["eggs", "chili", "tomato", "spices"],
     "taste": "spicy, savory",
     "description": "Telur Balado is boiled eggs coated with spicy chili and tomato sauce.",
-    "cultural_context": "Common side dish in Padang cuisine.",
+    "culture_events": "Common side dish in Padang cuisine.",
     "tips": {
       "spice_level": "Medium to high",
       "halal": "Yes",
@@ -1470,7 +692,7 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Telur Balado, satu porsi'.",
+      "ordering": "Say: 'Telur Balado, satu porsi'.",
       "price_range": "Rp 10.000 – Rp 25.000",
       "best_places": "Padang restaurants",
       "safety": "Safe if freshly made"
@@ -1479,10 +701,10 @@
   },
   "Telur Dadar": {
     "origin": "Indonesia",
-    "main_ingredients": ["eggs", "onion", "spices"],
+    "ingredients": ["eggs", "onion", "spices"],
     "taste": "savory, fluffy",
     "description": "Telur Dadar is Indonesian omelette, often mixed with vegetables or spices.",
-    "cultural_context": "Eaten as breakfast or side dish.",
+    "culture_events": "Eaten as breakfast or side dish.",
     "tips": {
       "spice_level": "Mild",
       "halal": "Yes",
@@ -1490,137 +712,11 @@
       "gluten_friendly": "Yes"
     },
     "tourist_notes": {
-      "how_to_order": "Say: 'Telur Dadar, satu porsi'.",
+      "ordering": "Say: 'Telur Dadar, satu porsi'.",
       "price_range": "Rp 5.000 – Rp 15.000",
       "best_places": "Warungs, breakfast stalls",
       "safety": "Safe if freshly cooked"
     },
     "fun_fact": "Telur Dadar is simple but highly versatile; can include chilies, shallots, or herbs."
-  },
-  "Terong": {
-    "origin": "Indonesia",
-    "main_ingredients": ["eggplant"],
-    "taste": "mild, slightly sweet, tender",
-    "description": "Terong (eggplant) is used in stir-fries, grilled dishes, and sambal goreng.",
-    "cultural_context": "Common vegetable in Indonesian home cooking.",
-    "tips": {
-      "spice_level": "Mild to medium depending on dish",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Terong, satu porsi'.",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Warungs, markets",
-      "safety": "Safe if cooked properly"
-    },
-    "fun_fact": "Terong absorbs spices well and is a favorite ingredient in Indonesian rendang and sambal dishes."
-  },
-  "Tiramisu": {
-    "origin": "Italian influence, popular in Indonesia",
-    "main_ingredients": [
-      "mascarpone cheese",
-      "coffee",
-      "ladyfingers",
-      "cocoa powder",
-      "sugar"
-    ],
-    "taste": "sweet, creamy, coffee-flavored",
-    "description": "Tiramisu is a layered dessert of coffee-soaked biscuits and creamy mascarpone.",
-    "cultural_context": "Served in cafes and restaurants; dessert option.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Check ingredients (alcohol content in some recipes)",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Contains wheat in ladyfingers"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Tiramisu, satu porsi'.",
-      "price_range": "Rp 30.000 – Rp 70.000",
-      "best_places": "Cafes, dessert shops",
-      "safety": "Safe if properly stored"
-    },
-    "fun_fact": "Tiramisu has become popular worldwide and is adapted with local flavors in Indonesia."
-  },
-  "Tomat": {
-    "origin": "Indonesia",
-    "main_ingredients": ["tomato"],
-    "taste": "sweet, tangy",
-    "description": "Tomat (tomato) is used fresh in salads, sambal, and cooking.",
-    "cultural_context": "Essential ingredient in Indonesian cuisine.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Tomat, satu porsi'.",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Markets, warungs",
-      "safety": "Wash before eating"
-    },
-    "fun_fact": "Tomatoes are often used in sambal and vegetable dishes for color and flavor."
-  },
-  "Ubi Jalar Merah": {
-    "origin": "Indonesia",
-    "main_ingredients": ["red sweet potato"],
-    "taste": "sweet, starchy, earthy",
-    "description": "Ubi Jalar Merah (red sweet potato) is a root vegetable popular in Indonesia, commonly boiled, steamed, or fried.",
-    "cultural_context": "Often eaten as a snack or substitute for rice, especially in rural areas.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Ubi rebus satu porsi' (boiled sweet potato).",
-      "price_range": "Rp 5.000 – Rp 10.000",
-      "best_places": "Traditional markets, warungs",
-      "safety": "Very safe, usually served fresh"
-    },
-    "fun_fact": "Ubi Jalar Merah is rich in beta-carotene, giving it its bright orange-red color."
-  },
-  "Waffles": {
-    "origin": "Belgium, popular worldwide",
-    "main_ingredients": ["flour", "milk", "eggs", "sugar", "butter"],
-    "taste": "sweet, fluffy, buttery",
-    "description": "Waffles are a Western-style breakfast or dessert with a crispy outside and fluffy inside, often topped with fruits or chocolate.",
-    "cultural_context": "Popular in modern cafes across Indonesia as a dessert or snack.",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Check toppings",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "No"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Waffle dengan coklat' (waffle with chocolate).",
-      "price_range": "Rp 20.000 – Rp 50.000",
-      "best_places": "Modern cafes, dessert shops",
-      "safety": "Safe in urban eateries"
-    },
-    "fun_fact": "Belgian waffles became famous worldwide after being introduced at the 1964 New York World’s Fair."
-  },
-  "Wortel": {
-    "origin": "Introduced to Indonesia, cultivated locally",
-    "main_ingredients": ["carrot"],
-    "taste": "sweet, crunchy, earthy",
-    "description": "Wortel (carrot) is widely used in Indonesian cuisine for soups, stir-fries, and juices.",
-    "cultural_context": "A common ingredient in capcay, fried rice, and carrot juice ('jus wortel').",
-    "tips": {
-      "spice_level": "N/A",
-      "halal": "Yes",
-      "vegetarian_options": "Yes",
-      "gluten_friendly": "Yes"
-    },
-    "tourist_notes": {
-      "how_to_order": "Say: 'Jus wortel satu gelas' (one glass of carrot juice).",
-      "price_range": "Rp 5.000 – Rp 15.000",
-      "best_places": "Juice stalls, markets, restaurants",
-      "safety": "Wash before eating or ensure fresh juice"
-    },
-    "fun_fact": "Carrots are rich in beta-carotene, which is good for eye health."
   }
 }
